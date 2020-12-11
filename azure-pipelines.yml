@@ -17,6 +17,7 @@ stages:
 
     variables:
       wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+      approotDir: 'Tailspin.SpaceGame.Web/AppRoot'
       dotnetSdkVersion: '3.1.300'
 
     steps:
@@ -67,6 +68,6 @@ stages:
 
     - task: CopyFiles@2
       inputs:
-        SourceFolder: '$(wwwrootDir)'
+        SourceFolder: '$(approotDir)'
         Contents: '**/*.json'
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
